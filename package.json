@@ -1,0 +1,50 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "rm -rf dist/ && gulp build",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "prettier": "prettier --write src",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "stylelint-check": "stylelint-config-prettier-check"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "eslint --fix",
+      "prettier --write",
+      "stylint --fix"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "sass": "^1.35.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
