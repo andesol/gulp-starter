@@ -14,11 +14,9 @@
     "stylelint-check": "stylelint-config-prettier-check"
   },
   "lint-staged": {
-    "src/**/*": [
-      "eslint --fix",
-      "prettier --write",
-      "stylint --fix"
-    ]
+    "src/js/**/*.js": "eslint src/js",
+    "src/sass": "stylint --fix",
+    "src/**/*": "prettier --write"
   },
   "keywords": [],
   "author": "",
